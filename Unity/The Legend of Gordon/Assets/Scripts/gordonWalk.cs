@@ -55,19 +55,23 @@ public class gordonWalk : MonoBehaviour
         }
         if (Attack == 1)
         {
-            myAnim =
+            
+        }
+        if (Attack == 2)
+        {
+
         }
     }
     IEnumerator AttackActionQ()
     {
         Attack = 1;
-        yield return new WaitForSeconds(0.8F);
+        yield return new WaitForSeconds(0.2F);
         Attack = 0;
     }
     IEnumerator AttackActionZ()
     {
         Attack = 2;
-        yield return new WaitForSeconds(0.8F);
+        yield return new WaitForSeconds(0.2F);
         Attack = 0;
     }
    

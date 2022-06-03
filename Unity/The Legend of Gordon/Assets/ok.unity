@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 55046063}
   - component: {fileID: 55046062}
   - component: {fileID: 55046064}
+  - component: {fileID: 55046065}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -222,6 +223,20 @@ MonoBehaviour:
   - {fileID: 701043546}
   - {fileID: 55046061}
   - {fileID: 55046061}
+  enemy: {fileID: 55046061}
+--- !u!114 &55046065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55046061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237b560ab6234e344b9013b98f0fe9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
 --- !u!1 &416772389
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Characters:
   - {fileID: 701043546}
+  enemy: {fileID: 0}
 --- !u!95 &701043548
 Animator:
   serializedVersion: 3
@@ -439,6 +455,7 @@ MonoBehaviour:
   speed: 5
   myAnim: {fileID: 701043548}
   Attack: 0
+  Health: 100
 --- !u!50 &701043552
 Rigidbody2D:
   serializedVersion: 4
@@ -525,7 +542,7 @@ SpriteRenderer:
   m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &996921853
