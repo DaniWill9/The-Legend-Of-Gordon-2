@@ -8,11 +8,13 @@ public class gordonWalk : MonoBehaviour
     float horizontalMove = 0;
     public Animator myAnim;
     public int Attack = 0;
+    public int Health = 100;
 
     // Start is called before the first frame update
     void Start()
     {
         myAnim = GetComponent<Animator>();
+        Health = 100;
     }
 
     // Update is called once per frame
@@ -51,6 +53,10 @@ public class gordonWalk : MonoBehaviour
         {
             StartCoroutine(AttackActionZ());
         }
+        if (Attack == 1)
+        {
+            myAnim =
+        }
     }
     IEnumerator AttackActionQ()
     {
@@ -64,4 +70,5 @@ public class gordonWalk : MonoBehaviour
         yield return new WaitForSeconds(0.8F);
         Attack = 0;
     }
+   
 }
