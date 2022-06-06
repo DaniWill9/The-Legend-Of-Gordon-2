@@ -32,9 +32,10 @@ public class VibeChecker : MonoBehaviour
 
         }
         
-       if (enemy.GetComponent<EnemyHelath>().Health <= 0 & collision.gameObject.tag == "Player")
+       if (enemy.GetComponent<EnemyHelath>().Health <= 0 )
         {
             StartCoroutine(DeadEnemy());
+            enemy.GetComponent<EnemyHelath>().Health = 100;
         }
         IEnumerator DeadEnemy()
         {
