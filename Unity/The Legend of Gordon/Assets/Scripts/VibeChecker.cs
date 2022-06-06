@@ -14,8 +14,8 @@ public class VibeChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-                if (Characters[0].GetComponent<gordonWalk>().Attack == 1)
+
+        if (Characters[0].GetComponent<gordonWalk>().Attack == 1)
         {
             enemy.GetComponent<EnemyHelath>().Health = enemy.GetComponent<EnemyHelath>().Health - 1;
 
@@ -32,7 +32,7 @@ public class VibeChecker : MonoBehaviour
         {
 
         }
-       if (enemy.GetComponent<EnemyHelath>().Health <= 0 )
+        if (enemy.GetComponent<EnemyHelath>().Health <= 0)
         {
             StartCoroutine(DeadEnemy());
             enemy.GetComponent<EnemyHelath>().Health = 100;
@@ -45,4 +45,5 @@ public class VibeChecker : MonoBehaviour
             enemy.GetComponent<Renderer>().enabled = true;
         }
     }
+}
    
