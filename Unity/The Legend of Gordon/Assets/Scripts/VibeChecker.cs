@@ -41,7 +41,7 @@ public class VibeChecker : MonoBehaviour
         {
             enemy.GetComponent<Renderer>().enabled = false;
             yield return new WaitForSeconds(1F);
-            enemy.GetComponent<Transform>().position = new Vector3(Random.Range(-40.0f, 40.0f), Random.Range(-40.0f, 40.0f), Random.Range(-40.0f, 40.0f));
+            enemy.GetComponent<Transform>().position = new Vector3(Random.Range(-8.0f, 8.0f), Random.Range(-8.0f, 8.0f), Random.Range(-8.0f, 8.0f));
             enemy.GetComponent<Renderer>().enabled = true;
         }
     }
