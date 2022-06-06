@@ -71,6 +71,7 @@ public class gordonWalk : MonoBehaviour
     IEnumerator AttackActionZ()
     {
         Attack = 2;
+        myAnim.SetTrigger("Attack1");
         yield return new WaitForSeconds(0.2F);
         Attack = 0;
     }
