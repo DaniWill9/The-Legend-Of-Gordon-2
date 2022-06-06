@@ -32,5 +32,9 @@ public class VibeChecker : MonoBehaviour
 
         }
 
+       if (enemy.GetComponent<EnemyHelath>().Health <= 0)
+        {
+            enemy.GetComponent<Renderer>().enabled = true;
+        }
     }
 }
