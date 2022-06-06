@@ -9,7 +9,7 @@ public class gordonWalk : MonoBehaviour
     public Animator myAnim;
     public int Attack = 0;
     public int Health = 100;
-
+    
     // Start is called before the first frame update
     void Start()
     {
