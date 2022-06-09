@@ -26,30 +26,30 @@ public class gordonWalk : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector3(0, -5, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector3(0, -10, 0);
         }
         else if (Input.GetKey(KeyCode.W))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector3(0, 5, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector3(0, 10, 0);
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector3(-5, 0, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector3(-10, 0, 0);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector3(5, 0, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector3(10 , 0, 0);
         }
         else
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         }
-        if(Input.GetKey(KeyCode.Q))
+        if(Input.GetKeyUp(KeyCode.Q))
         {
             StartCoroutine(AttackActionQ());
 
         }
-        if(Input.GetKey(KeyCode.Z))
+        if(Input.GetKeyUp(KeyCode.Z))
         {
             StartCoroutine(AttackActionZ());
         }
@@ -64,13 +64,13 @@ public class gordonWalk : MonoBehaviour
     }
     IEnumerator AttackActionQ()
     {
-        Attack = 1;
+       // Attack = 1;
         yield return new WaitForSeconds(0.2F);
-        Attack = 0;
+       // Attack = 0;
     }
     IEnumerator AttackActionZ()
     {
-        Attack = 2;
+       Attack = 2;
         myAnim.SetTrigger("Attack1");
         yield return new WaitForSeconds(0.2F);
         Attack = 0;

@@ -35,13 +35,14 @@ public class VibeChecker : MonoBehaviour
         if (enemy.GetComponent<EnemyHelath>().Health <= 0)
         {
             StartCoroutine(DeadEnemy());
-            enemy.GetComponent<EnemyHelath>().Health = 100;
+           
         }
         IEnumerator DeadEnemy()
-        {
+        { 
+            enemy.GetComponent<EnemyHelath>().Health = 100;
             enemy.GetComponent<Renderer>().enabled = false;
             yield return new WaitForSeconds(1F);
-            enemy.GetComponent<Transform>().position = new Vector3(Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f), Random.Range(-10.0f, 10.0f));
+            enemy.GetComponent<Transform>().position = new Vector3(Random.Range(-8.0f, 8.0f), Random.Range(-8.0f, 8.0f), Random.Range(-8.0f, 8.0f));
             enemy.GetComponent<Renderer>().enabled = true;
         }
     }
