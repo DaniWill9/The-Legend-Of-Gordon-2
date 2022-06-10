@@ -7,6 +7,7 @@ public class VibeChecker : MonoBehaviour
     public GameObject[] Characters;
     public GameObject enemy;
     public BoxCollider2D DaEnemy;
+    
     void Start()
     {
 
@@ -31,25 +32,6 @@ public class VibeChecker : MonoBehaviour
             enemy.GetComponent<Renderer>().enabled = true;
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (Characters[0].GetComponent<gordonWalk>().Attack == 1)
-        {
-            enemy.GetComponent<EnemyHelath>().Health = enemy.GetComponent<EnemyHelath>().Health - 1;
-
-        }
-        else if (Characters[0].GetComponent<gordonWalk>().Attack == 2)
-        {
-            enemy.GetComponent<EnemyHelath>().Health = enemy.GetComponent<EnemyHelath>().Health - 2;
-        }
-        else if (Characters[1].GetComponent<gordonWalk>().Attack == 1)
-        {
-
-        }
-        else if (Characters[1].GetComponent<gordonWalk>().Attack == 2)
-        {
-
-        }
-    }
+   
 }
    

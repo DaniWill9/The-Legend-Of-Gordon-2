@@ -9,7 +9,9 @@ public class gordonWalk : MonoBehaviour
     public Animator myAnim;
     public int Attack = 0;
     public int Health = 100;
-    
+    public Transform hitspot;
+    public float range;
+    public LayerMask mask;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,10 +72,21 @@ public class gordonWalk : MonoBehaviour
     }
     IEnumerator AttackActionZ()
     {
-       Attack = 2;
+        
         myAnim.SetTrigger("Attack1");
         yield return new WaitForSeconds(0.2F);
-        Attack = 0;
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(hitspot.position, range, mask);
+       
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<EnemyHelath>().TakeDamage(20);
+        }
     }
-   
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(hitspot.position, range);
+        if (hitspot == null)
+            return;
+    }
 }
